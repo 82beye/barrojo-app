@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>바로조 개인정보처리방침</title>
+<meta name="description" content="바로조(Barrojo)가 Google 사용자 데이터를 다루는 방식">
+<style>
+  :root { --bg:#fbfaf7; --fg:#1f2328; --muted:#5b636b; --line:#e3e0d8; --accent:#2f6f4f; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#16181b; --fg:#e8e6e1; --muted:#a3a9b0; --line:#2c3035; --accent:#7cc29b; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.7 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:48px 16px 64px; }
+  h1 { font-size:1.7rem; margin:0 0 4px; }
+  h2 { font-size:1.1rem; margin:32px 0 8px; }
+  .sub { color:var(--muted); margin:0 0 24px; }
+  ul { padding-left:1.2em; }
+  code { font-size:.92em; overflow-wrap:anywhere; }
+  a { color:var(--accent); }
+  footer { margin-top:48px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>바로조 개인정보처리방침</h1>
+  <p class="sub">시행일 2026-11-07 · 적용 대상: 바로조(Barrojo) Google OAuth 앱</p>
+
+  <h2>1. 누가 쓰나</h2>
+  <p>바로조는 운영자 본인 한 사람이 자기 맥북에서 쓰는 개인용 도구다. 다른 사람에게 서비스를 제공하지 않는다.</p>
+
+  <h2>2. 접근하는 Google 데이터</h2>
+  <ul>
+    <li><code>calendar.calendarlist.readonly</code> — 캘린더 목록 읽기</li>
+    <li><code>calendar.events.readonly</code> — 일정 읽기(전날부터 30일 뒤까지)</li>
+    <li><code>calendar.app.created</code> — 바로조가 만든 보조 캘린더에만 일정 쓰기·고치기·지우기</li>
+  </ul>
+  <p>사람이 쓰는 기본 캘린더의 일정은 만들거나 고치지 않는다.</p>
+
+  <h2>3. 어디에 쓰나</h2>
+  <p>운영자의 현황 표·브리핑·대화 답변에 일정을 보여 주고, 노션 작업 일정을 바로조 보조 캘린더로 옮기는 데만 쓴다.
+  광고·판매·사람 평가·모델 학습용 데이터 제공에는 쓰지 않는다.</p>
+
+  <h2>4. 어디에 저장하나</h2>
+  <ul>
+    <li>일정 색인과 동의 토큰은 운영자 맥북의 로컬 파일(<code>~/.barrojo/</code>, 토큰은 소유자만 읽기 가능)에만 저장한다.</li>
+    <li>모바일 앱은 운영자의 개인 네트워크로 맥북에 접속해 현황을 받아 화면에 보여 줄 뿐, 별도 서버에 일정을 보관하지 않는다.</li>
+  </ul>
+
+  <h2>5. 다른 곳으로 가는 데이터</h2>
+  <p>브리핑과 대화 답변을 만들 때, 7일 안 일정의 제목·시각·장소 요약이 운영자 본인 계정으로 쓰는 Anthropic Claude 모델에 전달된다.
+  그 응답을 만드는 데만 쓰며, 그 밖의 제3자에게 팔거나 넘기지 않는다.
+  바로조의 Google 사용자 데이터 사용은 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 서비스 사용자 데이터 정책</a>(제한적 사용 요건 포함)을 따른다.</p>
+
+  <h2>6. 보관과 삭제</h2>
+  <p>일정 색인은 수집할 때마다 새로 맞춰지며, 원본은 Google 캘린더다. 접근을 끊으려면
+  <a href="https://myaccount.google.com/permissions">Google 계정 → 서드 파티 앱 액세스</a>에서 '바로조'를 삭제하면 된다.
+  그 뒤 맥북의 <code>~/.barrojo/google.json</code> 과 색인을 지우면 로컬 사본도 남지 않는다.</p>
+
+  <h2>7. 문의</h2>
+  <p><a href="https://github.com/82beye/barrojo-app/issues">GitHub 이슈</a>로 남기면 된다.</p>
+
+  <footer>
+    <a href="index.html">바로조 홈</a>
+    <p lang="en">Summary: Barrojo is a single-user tool. It reads the operator's Google Calendar and writes only to calendars it created. Data stays on the operator's MacBook; summaries of upcoming events are sent to the operator's own Anthropic Claude account only to generate briefings and answers. Use of Google user data complies with the Google API Services User Data Policy, including the Limited Use requirements.</p>
+  </footer>
+</main>
+</body>
+</html>

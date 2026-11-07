@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>바로조 (Barrojo)</title>
+<meta name="description" content="맥북 한 대에서 돌아가는 개인용 작업 관제 비서 바로조 소개">
+<style>
+  :root { --bg:#fbfaf7; --fg:#1f2328; --muted:#5b636b; --line:#e3e0d8; --accent:#2f6f4f; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#16181b; --fg:#e8e6e1; --muted:#a3a9b0; --line:#2c3035; --accent:#7cc29b; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.7 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:48px 16px 64px; }
+  h1 { font-size:2rem; margin:0 0 4px; letter-spacing:-0.01em; }
+  h2 { font-size:1.15rem; margin:36px 0 8px; }
+  .sub { color:var(--muted); margin:0 0 24px; }
+  table { width:100%; border-collapse:collapse; margin:8px 0; }
+  th, td { text-align:left; vertical-align:top; padding:10px 8px; border-top:1px solid var(--line); }
+  th { width:30%; font-weight:600; }
+  a { color:var(--accent); }
+  footer { margin-top:48px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>바로조 <small style="font-weight:400;color:var(--muted)">Barrojo</small></h1>
+  <p class="sub">맥북 한 대에서 돌아가는 개인용 작업 관제 비서. 운영자 본인 한 사람만 쓴다.</p>
+
+  <h2>무엇을 하나</h2>
+  <p>운영자의 맥북에서 돌아가는 여러 프로젝트(에이전트 세션·예약 작업·저장소 상태·일정)를 한곳에 모아
+  현황 표와 하루 세 번의 브리핑으로 보여 주고, 막힌 일을 정리한다.</p>
+
+  <h2>구성</h2>
+  <table>
+    <tr><th>개발 맥북</th><td>바로조의 모든 작업이 여기서 돈다 — 상태 수집, 브리핑 생성, 일정 동기화, 에이전트 지휘. 데이터도 맥북에만 저장한다.</td></tr>
+    <tr><th>모바일 앱</th><td>사용자 인터페이스 — 대화·음성·지침 입력, 맥북과의 동기화, 현황·브리핑 보기. 운영자의 개인 네트워크로 맥북에만 연결하며 공개 서버는 없다.</td></tr>
+  </table>
+
+  <h2>Google 캘린더 사용</h2>
+  <p>운영자 본인 계정의 일정을 읽어 현황·브리핑에 넣고, 바로조가 직접 만든 보조 캘린더(작업·오늘 계획·잡은 일정)에만 일정을 쓴다.
+  사람이 쓰는 기본 캘린더는 고치지 않는다. 자세한 내용은 <a href="privacy.html">개인정보처리방침</a>에 있다.</p>
+
+  <footer>
+    <a href="privacy.html">개인정보처리방침 (Privacy Policy)</a> ·
+    문의: <a href="https://github.com/82beye/barrojo-app/issues">GitHub 이슈</a>
+    <p lang="en">Barrojo is a personal, single-user assistant that runs on its operator's own MacBook. The mobile app is only an interface to that machine.</p>
+  </footer>
+</main>
+</body>
+</html>
